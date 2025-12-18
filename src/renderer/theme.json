@@ -1,0 +1,27 @@
+{
+  "themeName": "default-light",
+  "cssVariables": {
+    "--sjs-font-family": "'Geist', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+    "--sjs-font-size": "16px",
+    "--sjs-primary-backcolor": "#2563eb",
+    "--sjs-primary-backcolor-light": "rgba(37, 99, 235, 0.1)",
+    "--sjs-primary-backcolor-dark": "#1d4ed8",
+    "--sjs-primary-forecolor": "#ffffff",
+
+    "--sjs-general-backcolor": "#ffffff",
+    "--sjs-general-backcolor-dim": "#f8fafc",
+    "--sjs-general-backcolor-dim-light": "#f1f5f9",
+
+    "--sjs-general-forecolor": "#1e293b",
+    "--sjs-general-forecolor-light": "#64748b",
+    "--sjs-general-dim-forecolor": "#94a3b8",
+
+    "--sjs-border-default": "#e2e8f0",
+    "--sjs-border-light": "#f1f5f9",
+
+    "--sjs-corner-radius": "8px",
+
+    "--sjs-error-color": "#dc2626",
+    "--sjs-error-background": "#fef2f2"
+  }
+}

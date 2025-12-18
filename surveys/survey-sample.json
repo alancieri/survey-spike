@@ -1,0 +1,139 @@
+{
+  "title": "Survey di esempio",
+  "description": "Questo survey testa varie funzionalità di SurveyJS",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Informazioni personali",
+      "elements": [
+        {
+          "type": "text",
+          "name": "nome",
+          "title": "Come ti chiami?",
+          "isRequired": true,
+          "placeholder": "Inserisci il tuo nome"
+        },
+        {
+          "type": "text",
+          "name": "email",
+          "title": "Qual è la tua email?",
+          "isRequired": true,
+          "inputType": "email",
+          "validators": [
+            {
+              "type": "email"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "ruolo",
+          "title": "Qual è il tuo ruolo in azienda?",
+          "isRequired": true,
+          "choices": [
+            { "value": "developer", "text": "Developer" },
+            { "value": "designer", "text": "Designer" },
+            { "value": "pm", "text": "Product Manager" },
+            { "value": "other", "text": "Altro" }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "ruolo_altro",
+          "title": "Specifica il tuo ruolo",
+          "visibleIf": "{ruolo} = 'other'",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Esperienza tecnica",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "esperienza_react",
+          "title": "Quanto sei esperto con React?",
+          "rateMin": 1,
+          "rateMax": 5,
+          "minRateDescription": "Principiante",
+          "maxRateDescription": "Esperto"
+        },
+        {
+          "type": "checkbox",
+          "name": "tecnologie",
+          "title": "Quali tecnologie utilizzi regolarmente?",
+          "isRequired": true,
+          "choices": [
+            "TypeScript",
+            "JavaScript",
+            "React",
+            "Vue",
+            "Angular",
+            "Node.js",
+            "Python",
+            "Go"
+          ],
+          "hasOther": true,
+          "otherText": "Altro (specifica)"
+        },
+        {
+          "type": "radiogroup",
+          "name": "preferenza_stato",
+          "title": "Quale soluzione preferisci per la gestione dello stato?",
+          "choices": [
+            { "value": "redux", "text": "Redux / Redux Toolkit" },
+            { "value": "zustand", "text": "Zustand" },
+            { "value": "context", "text": "React Context" },
+            { "value": "jotai", "text": "Jotai / Recoil" },
+            { "value": "none", "text": "Nessuna preferenza" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Feedback",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "vuole_feedback",
+          "title": "Vuoi lasciare un feedback aggiuntivo?",
+          "labelTrue": "Sì",
+          "labelFalse": "No"
+        },
+        {
+          "type": "comment",
+          "name": "feedback",
+          "title": "Scrivi il tuo feedback",
+          "visibleIf": "{vuole_feedback} = true",
+          "placeholder": "Inserisci qui il tuo feedback...",
+          "rows": 4
+        },
+        {
+          "type": "matrix",
+          "name": "valutazione",
+          "title": "Valuta i seguenti aspetti di SurveyJS",
+          "columns": [
+            { "value": 1, "text": "Scarso" },
+            { "value": 2, "text": "Sufficiente" },
+            { "value": 3, "text": "Buono" },
+            { "value": 4, "text": "Ottimo" }
+          ],
+          "rows": [
+            { "value": "facilita", "text": "Facilità d'uso" },
+            { "value": "documentazione", "text": "Documentazione" },
+            { "value": "flessibilita", "text": "Flessibilità" }
+          ]
+        }
+      ]
+    }
+  ],
+  "showProgressBar": "top",
+  "progressBarType": "buttons",
+  "showQuestionNumbers": "on",
+  "questionErrorLocation": "bottom",
+  "completeText": "Invia",
+  "showPreviewBeforeComplete": "showAnsweredQuestions"
+}
