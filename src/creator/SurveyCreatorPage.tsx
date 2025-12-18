@@ -6,6 +6,7 @@ import "survey-core/survey-core.min.css";
 import "survey-creator-core/survey-creator-core.min.css";
 
 import creatorTheme from "./theme.json";
+import rendererTheme from "../renderer/theme.json";
 import { getSurvey, saveSurvey } from "../services/surveyStorage";
 
 // Imposta le lingue supportate per le traduzioni
@@ -57,6 +58,9 @@ export function SurveyCreatorPage() {
     });
 
     c.applyCreatorTheme(creatorTheme);
+
+    // Applica il tema del Renderer alla Preview
+    c.theme = rendererTheme;
 
     return c;
   }, []);

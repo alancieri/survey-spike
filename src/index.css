@@ -17,3 +17,20 @@ body {
 .sd-container-modern__title {
     padding: 0 0 20px !important;
 }
+
+/* Preview nel Creator: centra e limita larghezza come il Renderer */
+.svc-test-tab__content,
+.svc-plugin-tab__content,
+.svc-creator-tab__content,
+.svc-test-tab__content .sd-root-modern,
+.svc-test-tab__content .sv-scroll__wrapper,
+.svc-test-tab__content .sv-scroll__scroller,
+.svc-test-tab__content .sv-scroll__container {
+    background-color: #ffffff !important;
+}
+
+.svc-test-tab__content .sd-root-modern {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
